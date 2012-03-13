@@ -81,7 +81,6 @@ PRODUCT_PACKAGES += \
     audio_policy.p500 \
     audio.primary.p500 \
     hwaddrs \
-    copybit.msm7k \
     libOmxCore \
     lgapversion
 

@@ -22,6 +22,8 @@
 /dev/kgsl-3d0             0666   root       root
 /dev/kgsl-2d0             0666   root       root
 /dev/kgsl-2d1             0666   root       root
+/dev/genlock            0666    system  graphics
+
 
 # these should not be world writable
 /dev/diag_arm9            0660   radio      radio

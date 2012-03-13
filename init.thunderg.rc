@@ -62,8 +62,28 @@ service wpa_supplicant /system/bin/wpa_supplicant -Dwext -iwlan0 -c/data/misc/wi
     disabled
     oneshot
 
+#DRM server
+service drm /system/bin/drmserver
+    user root
+    group root
+    enabled
+    oneshot
+
+# Fast dormancy settings
+    setprop ro.ril.fast.dormancy.rule 1
+    setprop ro.ril.fd.scron.timeout 4
+    setprop ro.ril.fd.scroff.timeout 3
+
+# Wakelock debug
+    write /sys/module/wakelock/parameters/debug_mask 7
+
 #USB
     import init.thunderg.usb.rc
+
+on fs
+    # framebuffer permission for copybit
+    chmod 0666 /dev/graphics/fb0
+
 
 on property:dev.bootcomplete=1
     exec /system/bin/hwaddrs
