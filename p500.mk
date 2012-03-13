@@ -74,6 +74,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     gps.p500 \
     lights.p500 \
+    audio_policy.p500 \
+    audio.primary.p500 \
     hwaddrs \
     copybit.msm7k \
     libOmxCore \
