@@ -75,13 +75,32 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/lge/p500/proprietary/usr/idc/touch_mcs6000.idc:system/usr/idc/touch_mcs6000.idc\
 
+# Audio
 PRODUCT_PACKAGES += \
+    audio_policy.p500 \
+    audio.primary.p500
+
+# Display
+PRODUCT_PACKAGES += \
+    libgenlock \
+    libmemalloc \
+    libopencorehw \
+    liboverlay \
+    libQcomUI \
+    libstagefrighthw \
+    libtilerenderer
+
+# Media
+PRODUCT_PACKAGES += \
+    libOmxCore \
+    libmm-omxcore
+
+# Misc
+PRODUCT_PACKAGES += \
+    com.android.future.usb.accessory \
     gps.p500 \
     lights.p500 \
-    audio_policy.p500 \
-    audio.primary.p500 \
     hwaddrs \
-    libOmxCore \
     lgapversion
 
 $(call inherit-product, build/target/product/full.mk)
