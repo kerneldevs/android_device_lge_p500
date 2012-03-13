@@ -46,6 +46,12 @@ BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 50000
 
 BOARD_EGL_CFG := device/lge/p500/configs/egl.cfg
 
+# Mass Storage for ICS
+BOARD_USE_USB_MASS_STORAGE_SWITCH := true
+BOARD_CUSTOM_USB_CONTROLLER := ../../device/lge/thunderg/prebuilt/UsbController.cpp
+BOARD_UMS_LUNFILE := /sys/devices/platform/msm_hsusb/gadget/lun0/file
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/usb_mass_storage/lun0/file
+
 TARGET_SPECIFIC_HEADER_PATH := device/lge/p500/include
 TARGET_LIBAGL_USE_GRALLOC_COPYBITS := true
 BOARD_CAMERA_USE_GETBUFFERINFO := true
