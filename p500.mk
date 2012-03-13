@@ -71,6 +71,10 @@ PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
     frameworks/base/data/etc/android.hardware.touchscreen.multitouch.distinct.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.distinct.xml
 
+# IDC file
+PRODUCT_COPY_FILES += \
+    vendor/lge/p500/proprietary/usr/idc/touch_mcs6000.idc:system/usr/idc/touch_mcs6000.idc\
+
 PRODUCT_PACKAGES += \
     gps.p500 \
     lights.p500 \

@@ -51,6 +51,9 @@ BOARD_CUSTOM_USB_CONTROLLER := ../../device/lge/thunderg/prebuilt/UsbController.
 BOARD_UMS_LUNFILE := /sys/devices/platform/msm_hsusb/gadget/lun0/file
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/usb_mass_storage/lun0/file
 
+#TouchScreen Compatibility for ICS
+BOARD_USE_LEGACY_TOUCHSCREEN := true
+
 TARGET_SPECIFIC_HEADER_PATH := device/lge/p500/include
 TARGET_LIBAGL_USE_GRALLOC_COPYBITS := true
 BOARD_CAMERA_USE_GETBUFFERINFO := true
