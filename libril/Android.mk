@@ -1,4 +1,5 @@
 # Copyright 2006 The Android Open Source Project
+ifneq ($(BOARD_PROVIDES_LIBRIL),true)
 
 LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
@@ -21,3 +22,5 @@ LOCAL_MODULE:= libril
 LOCAL_LDLIBS += -lpthread
 
 include $(BUILD_SHARED_LIBRARY)
+
+endif
