@@ -20,8 +20,8 @@ PRODUCT_COPY_FILES += \
 # Board-specific init
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/initlogo.rle:root/initlogo.rle \
-    $(LOCAL_PATH)/init.thunderg.rc:root/init.thunderg.rc \
-    $(LOCAL_PATH)/ueventd.thunderg.rc:root/ueventd.thunder.rc
+    $(LOCAL_PATH)/init.p500.rc:root/init.p500.rc \
+    $(LOCAL_PATH)/ueventd.p500.rc:root/ueventd.p500.rc
 
 # BT startup
 PRODUCT_COPY_FILES += \
@@ -71,10 +71,6 @@ PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
     frameworks/base/data/etc/android.hardware.touchscreen.multitouch.distinct.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.distinct.xml
 
-# IDC file
-PRODUCT_COPY_FILES += \
-    vendor/lge/p500/proprietary/usr/idc/touch_mcs6000.idc:system/usr/idc/touch_mcs6000.idc\
-
 # Audio
 PRODUCT_PACKAGES += \
     audio_policy.p500 \
@@ -108,4 +104,5 @@ $(call inherit-product, build/target/product/full.mk)
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 PRODUCT_NAME := p500
 PRODUCT_DEVICE := p500
+PRODUCT_BRAND := lge
 PRODUCT_MODEL := LG Optimus One

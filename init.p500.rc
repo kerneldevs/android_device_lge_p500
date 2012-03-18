@@ -78,7 +78,7 @@ service drm /system/bin/drmserver
     write /sys/module/wakelock/parameters/debug_mask 7
 
 #USB
-    import init.thunderg.usb.rc
+    import init.p500.usb.rc
 
 on fs
     # framebuffer permission for copybit
